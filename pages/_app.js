@@ -8,6 +8,11 @@ import theme from "../src/theme/theme";
 import createEmotionCache from "../src/createEmotionCache";
 import FullLayout from "../src/layouts/FullLayout";
 import "../styles/style.css";
+import { ChainId, ThirdwebProvider } from "@thirdweb-dev/react";
+
+// This is the chainId your dApp will work on.
+const activeChainId = ChainId.Goerli;
+
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();
 
@@ -22,9 +27,11 @@ export default function MyApp(props) {
       </Head>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <FullLayout>
-          <Component {...pageProps} />
-        </FullLayout>
+        <ThirdwebProvider desiredChainId={activeChainId}>
+          <FullLayout>
+            <Component {...pageProps} />
+          </FullLayout>
+        </ThirdwebProvider>
       </ThemeProvider>
     </CacheProvider>
   );

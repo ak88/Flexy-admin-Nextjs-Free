@@ -9,6 +9,8 @@
     "@emotion/styled": "11.6.0",
     "@mui/lab": "^5.0.0-alpha.65",
     "@mui/material": "5.2.2",
+    "@thirdweb-dev/react": "^3.6.3",
+    "@thirdweb-dev/sdk": "^3.6.3",
     "@web3-onboard/injected-wallets": "^2.4.0",
     "@web3-onboard/react": "^2.4.1",
     "@web3-react/core": "^6.1.9",

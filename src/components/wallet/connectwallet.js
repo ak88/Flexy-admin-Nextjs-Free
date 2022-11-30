@@ -3,6 +3,7 @@ import { useWeb3React } from '@web3-react/core'
 import { useEffect } from 'react'
 import { init, useConnectWallet } from '@web3-onboard/react'
 import injectedModule from '@web3-onboard/injected-wallets'
+
 import {
   Box,
   Menu,
@@ -29,6 +30,7 @@ init({
   ]
  })
 
+ //Block native version
 
 const ConnectWallet = () => {
   const [{ wallet, connecting }, connect, disconnect] = useConnectWallet();
