@@ -9,20 +9,26 @@ import {
   } from "@mui/material";
   import {useAddress,useContract,useMetamask,useNFTs,} from "@thirdweb-dev/react";
 
-  const { contract } = useContract("0x05B8aab3fd77580C29c6510d8C54D9E6be4262d2");
 
+
+
+
+
+  const Gallery = () => {
+
+  const { contract } = useContract("0xBC4CA0EdA7647A8aB7C2061c2E118A18a936f13D");
   const { data: nfts, isLoading: loading } = useNFTs(contract?.nft, {
     start: 0,
     count: 10,
   });
 
+  console.log(nfts)
   const truncateAddress = (address) => {
     return (
       address.substring(0, 6) + "..." + address.substring(address.length - 4)
     );
   };
 
-  const Gallery = () => {
     <>
     <div>
         {nfts && nfts?.length > 0 && (

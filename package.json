@@ -9,6 +9,7 @@
     "@emotion/styled": "11.6.0",
     "@mui/lab": "^5.0.0-alpha.65",
     "@mui/material": "5.2.2",
+    "@ramper/ethereum": "^0.0.28",
     "@thirdweb-dev/react": "^3.6.3",
     "@thirdweb-dev/sdk": "^3.6.3",
     "@web3-onboard/injected-wallets": "^2.4.0",
