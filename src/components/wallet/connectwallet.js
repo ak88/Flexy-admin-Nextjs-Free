@@ -1,8 +1,15 @@
 import React from "react";
-import { useWeb3React } from '@web3-react/core'
 import { useEffect } from 'react'
-import { init, useConnectWallet } from '@web3-onboard/react'
-import injectedModule from '@web3-onboard/injected-wallets'
+import { 
+  init, 
+  AUTH_PROVIDERS, 
+  CHAIN, 
+  THEME, 
+  WALLET_PROVIDER, 
+  SUPPORTED_ETHEREUM_NETWORKS 
+} from '@ramper/ethereum'
+import { getWalletModel, User } from '@ramper/core'
+import { ethers } from '@ethers'
 
 import {
   Box,
